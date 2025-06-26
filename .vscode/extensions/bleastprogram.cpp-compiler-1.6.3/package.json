@@ -1,0 +1,109 @@
+{
+	"name": "CPP-Compiler",
+	"displayName": "CPP_",
+	"publisher": "bleastProgram",
+	"icon": "./CPPLOGO.png",
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
+	"homepage": "https://github.com/BleastT/CPP_extension/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/BleastT/CPP_extension/issues",
+		"email": "bleastbt@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BleastT/CPP_extension"
+	},
+	"author": {
+		"name": "bleastProgram"
+	},
+	"description": "An extension for compiling CPP and C projects. Supports debug and release mode with as many CPP or C files as you want",
+	"version": "1.6.3",
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Debuggers",
+		"Other"
+	],
+	"keywords": [
+		"cpp",
+		"runner",
+		"compile",
+		"compiler",
+		"c++",
+		"c",
+		"gcc",
+		"clang++",
+		"clang",
+		"programming",
+		"debugger",
+		"g++",
+		"gcc",
+		"gdb",
+		"hpp",
+		"h"
+	],
+	"activationEvents": [
+		"onLanguage:cpp",
+		"onLanguage:c",
+		"onCommand:CPP-Compiler.activate"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "CPP-Compiler.run",
+				"title": "CPP_ : Compile project"
+			},
+			{
+				"command": "CPP-Compiler.restart",
+				"title": "CPP_ : ReCompile project"
+			},
+			{
+				"command": "CPP-Compiler.activate",
+				"title": "CPP_ : Activate Extension"
+			},
+			{
+				"command": "CPP-Compiler.configure",
+				"title": "CPP_ : Configure the project"
+			}
+		]
+	},
+	"debuggers": [
+		{
+			"type": "gdb",
+			"program": "${workspaceFolder}/buid/out/sfmltest.exe"
+		}
+	],
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"eslint": "^8.34.0"
+	},
+	"dependencies": {
+		"child_process": "^1.0.2",
+		"fs-extra": "^11.1.0",
+		"js-yaml": "^4.1.0"
+	},
+	"__metadata": {
+		"id": "261848cd-aa7f-4776-bd3a-bef89f4ce103",
+		"publisherId": "db9c62e1-a9af-43af-baca-c71ce481c914",
+		"publisherDisplayName": "bleastProgram",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1738080784544,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 4764093
+	}
+}
